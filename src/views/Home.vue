@@ -1,40 +1,50 @@
 <template>
-  <div 
-    class="home">
-    
-    <img 
+  <div class="home">
+    <img
       class="logo"
-      src="../assets/logo.svg" 
-      alt="big penguin hugging a smaller penguin">
+      src="../assets/logo.svg"
+      alt="big penguin hugging a smaller penguin"
+    />
     <div class="content">
-      <Hello msg="Welcome to barnub.us!"/>
+      <div class="hello">
+        <h1>The Encourage App</h1>
+        <p>
+          Our mission is to provide topical scripture selections so that the
+          Word of God can encourage the children of God.
+        </p>
+        <p>Choose a path from the list to begin</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import Hello from '@/components/Hello.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    Hello
-  }
+  name: 'Home'
 }
 </script>
 
 <style lang="stylus" scoped>
 .logo
-  width 290px
-  height 428px
-  transform scale(1)
+  margin 5vmin
+  height 33vmin
   transform-origin top center
 
+h3
+  margin 40px 0 0
 
-.fade-view-leave .logo, .fade-view-enter-to .logo
-  transform scale(1)
-.fade-view-enter .logo, .fade-view-leave-to .logo
-  transform scale(.3448)
+ul
+  list-style-type none
+  padding 0
 
+li
+  display inline-block
+  margin 0 10px
+
+a
+  color #42b983
+
+.hello
+  width 80%
+  margin 25px auto
 </style>

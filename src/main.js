@@ -3,7 +3,16 @@ import App from './App.vue'
 import router from './router'
 import './registerServiceWorker'
 
-Vue.config.productionTip = false
+import PageBody from './components/PageBody.vue'
+import PageTitle from './components/PageTitle.vue'
+
+import ScriptureCarousel from './components/ScriptureCarousel.vue'
+
+Vue.config.productionTip = true
+
+Vue.component('PageBody', PageBody)
+Vue.component('PageTitle', PageTitle)
+Vue.component('ScriptureCarousel', ScriptureCarousel)
 
 new Vue({
   router,
